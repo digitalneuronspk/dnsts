@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+  <div class="w-full max-w-sm p-6 bg-white rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-bold text-center mb-2">Enter Your Phone</h2>
+    <h4 class="text-center mb-5">اپنا فون نمبر درج کریں</h4>
+
+    <form id="phoneForm" class="space-y-4">
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        required 
+        placeholder="03XXXXXXXXX"
+        maxlength="11"
+        class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+      >
+      
+      <button 
+        type="submit"
+        class="w-full bg-purple-700 text-white py-2 rounded-xl hover:bg-purple-500 duration-500 transition">
+        Submit
+      </button>
+    </form>
+
+    <p id="responseMsg" class="mt-4 text-center text-gray-600"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("phoneForm");
+    const msg = document.getElementById("responseMsg");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const phone = document.getElementById("phone").value.trim();
+
+      // Validate phone number (must be 11 digits)
+      if (!/^\d{11}$/.test(phone)) {
+        msg.textContent = "❌ Please enter a valid 11-digit phone number.";
+        return;
+      }
+
+      msg.textContent = "⏳ Please wait...";
+
+      try {
+        await fetch("https://script.google.com/macros/s/AKfycbwz-T2GkADfFHUohYw_RsCKlDBjOluWMPYNXFDvYzCiDpqLrTIFSaPU0OpYcaEmLk7f/exec", {
+          method: "POST",
+          mode: "no-cors",  // bypass CORS (response won't be readable)
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ phone })
+        });
+
+        msg.textContent = "✅ Saved successfully! Redirecting...";
+
+        // Redirect after 1 seconds
+        setTimeout(() => {
+          window.location.href = "./sts.html"; // change "/" to your homepage URL
+        }, 1000);
+
+        form.reset();
+      } catch (err) {
+        msg.textContent = "❌ Error: " + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

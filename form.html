@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STS Report Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+  <!-- Form Container -->
+  <div class="w-full max-w-md p-6 bg-white rounded-lg border border-gray-200 shadow">
+    <h2 class="text-xl font-bold mb-4 text-center text-gray-800">Get Analyzed Report</h2>
+
+    <form id="stsForm" class="space-y-4">
+      <!-- Name -->
+      <div>
+        <label class="block mb-1 text-gray-700">Name</label>
+        <input type="text" name="name" required placeholder="Adam Sultan"
+          class="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:outline-none">
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="block mb-1 text-gray-700">Phone</label>
+        <input type="text" name="phone" required placeholder="03122646268" pattern="^[0-9]{11}$" maxlength="11"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,11)"
+          class="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:outline-none">
+      </div>
+
+      <!-- CNIC -->
+      <div>
+        <label class="block mb-1 text-gray-700">CNIC: (without dashes --)</label>
+        <input type="text" name="cnic" required placeholder="4410387104099" pattern="^[0-9]{13}$" maxlength="13"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,13)"
+          class="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:outline-none">
+      </div>
+
+      <!-- Category -->
+      <div>
+        <label class="block mb-1 text-gray-700">Category</label>
+        <select name="category" required
+          class="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:outline-none">
+          <option value="">-- Select --</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Graduation">Graduation</option>
+          <option value="Matriculation"  disabled>Matriculation</option>
+        </select>
+      </div>
+
+      <!-- Report Type -->
+      <div>
+        <label class="block mb-1 text-gray-700">Report Type</label>
+        <select name="report_type" required
+          class="w-full p-2 border border-gray-300 rounded focus:ring focus:ring-indigo-200 focus:outline-none">
+          <option value="">-- Select --</option>
+          <option value="My Personal and My District (Rs.50)">My Personal and My District (Rs.50)</option>
+          <option value="Completed Report Including all Districts (Rs.150)">Completed Report Including all Districts
+            (Rs.150)</option>
+        </select>
+      </div>
+
+      <!-- Amount Status -->
+      <div>
+        <label class="block mb-1 text-gray-700">Amount Status</label>
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" name="amount_status" value="Paid" required
+            class="w-4 h-4 text-indigo-600 border-gray-300 rounded">
+          <span class="text-gray-700">Paid</span>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div>
+        <span class="text-gray-700 text-[10px]">
+          <b>Agree to Our Terms & Conditions:</b>
+          <li>1. This report is provided solely for analysis purposes.</li>
+          <li>2. The report is intended for the candidate’s personal information only.</li>
+          <li>3. We are not affiliated with any government or private institution.</li>
+          <li>4. Report charges are non-refundable.</li>
+          <li>5. Only a one-time soft copy of the report will be provided.</li>
+          <li>6. Any errors found in the report will be entertained only if reported within 24 hours.</li>
+        </span>
+        <div class="flex items-center space-x-2 mt-1">
+          <input type="checkbox" name="terms" value="Accepted" required
+            class="w-4 h-4 text-indigo-600 border-gray-300 rounded">
+          <span class="text-gray-700">Accepted</span>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" id="submitBtn" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700">
+        Submit
+      </button>
+    </form>
+
+    <p id="responseMsg" class="mt-4 text-center text-md"></p>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="popup" class=" hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 text-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full text-gray-800">
+      <h3 class="text-xl font-bold text-center mb-4 text-green-600">🎉 Congratulations! 🎉</h3>
+      <p class="text-center mb-4">You have submitted your form successfully.</p>
+
+      <div class="space-y-3 text-sm flex flex-col items-center gap-1">
+        <!-- Section 1 -->
+        <p>You will receive your report card within 24 hours once your payment is verified.</p>
+
+
+        <p class="">Please join us on YouTube for updates</p>
+        <a href="https://www.youtube.com/@digitalneurons5" target="_blank" class="text-blue-600 underline"><img
+            src="./assets/img/logos/youtube_3128307.png" alt="youtube" class="w-14 h-14"></a>
+
+
+
+      </div>
+      <!-- Close Button -->
+      <div class="text-center mt-4 flex justify-end">
+        <button onclick="document.getElementById('popup').classList.add('hidden')"
+          class="bg-red-600 py-1  px-4 text-white rounded-sm">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbw25xBiTXcREGhPaHLHzbU12F443OkhLyZv7ryuqzDurmuiXIr-LkaFT29xM99YW_FIuQ/exec";
+      const form = document.getElementById("stsForm");
+      const responseMsg = document.getElementById("responseMsg");
+      const submitBtn = document.getElementById("submitBtn");
+      const popup = document.getElementById("popup");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+        responseMsg.textContent = "";
+
+        const formData = {
+          name: form.name.value,
+          phone: form.phone.value,
+          cnic: form.cnic.value,
+          category: form.category.value,
+          report_type: form.report_type.value,
+          amount_status: form.amount_status.checked ? "Paid" : ""
+        };
+
+        try {
+          await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application/json" }
+          });
+
+          responseMsg.textContent = "✅ Form submitted successfully!";
+          responseMsg.className = "mt-4 text-green-600 text-center text-sm";
+          form.reset();
+
+          // Show popup after 3 seconds
+          setTimeout(() => {
+            popup.classList.remove("hidden");
+          }, 1000);
+
+        } catch (err) {
+          responseMsg.textContent = "❌ Error submitting form!";
+          responseMsg.className = "mt-4 text-red-600 text-center text-sm";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+        }
+      });
+    </script>
+
+</body>
+
+</html>

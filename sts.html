@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Digital Neurons | STS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .urdu-heading-1 {
+      font-family: "Noto Nastaliq Urdu", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 5px;
+      line-height: 3;
+    }
+
+    .urdu-text {
+      font-family: "Noto Nastaliq Urdu", serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-size: 14px;
+      line-height: 2;
+    }
+  </style>
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class=" me-auto">
+
+        <img src="./assets/img/logos/logo_side_name3.png" alt="dn logo" width="200" height="60">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="./index.html">Home<br></a></li>
+          <li><a href="./index.html">About</a></li>
+          <li><a href="./index.html">Services</a></li>
+          <li><a href="./sts.html" class="active">Results Report</a></li>
+
+          </li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://wa.me/923272686365"><img src="./assets/img/logos/whatsapp-icon.png"
+          alt="wp" height="45" width="45"></a>
+
+    </div>
+  </header>
+  <!-- <main class="main-section   flex gap-2 flex-col md:flex-row">
+
+    <div class="sidebar min-w-80 bg-gray-50 p-2 md:h-[600px] py-4 flex justify-content-center ">
+      <ul class="m-0 p-0 flex flex-col gap-1 ">
+        <li class="text-center py-2 bg-purple-200 w-80 mb-1 p-2">Introduction</li>
+        <li class="text-center py-2 bg-purple-200 w-80 mb-1 p-2">Pricing</li>
+        <li class="text-center py-2 bg-purple-200 w-80 mb-1 p-2">Order Now</li>
+      </ul>
+      
+
+    </div>
+
+    <div class="content-sec">
+      <h2>Content</h2>
+    </div>
+
+    
+
+
+  </main> -->
+
+
+
+  <main class="main-section flex gap-2 flex-col md:flex-row justify-start">
+    <!-- Sidebar -->
+    <div class="sidebar min-w-80 bg-purple-50 p-2 md:h-[600px] py-4">
+      <ul class="m-0 p-0 flex flex-col gap-1">
+        <li data-target="intro"
+          class="flex justify-start items-center gap-2 shadow-sm py-2 bg-purple-50 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
+          <span><img src="./assets/img/logos/presentation_6503580.png" alt="intro" class="w-7 h-7"></span>
+          <span>Introduction</span>
+        </li>
+        <li data-target="test" id="openFormBtn"
+          class="flex justify-start items-center gap-2 shadow-sm py-2 bg-purple-50 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
+          <span><img src="./assets/img/logos/testing_18142557.png" alt="" class="w-7 h-7"></span> <span>Check
+            Results</span>
+        </li>
+        <li data-target="pricing"
+          class="flex justify-start items-center gap-2 shadow-sm py-2 bg-purple-50 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
+          <span><img src="./assets/img/logos/price_11649329.png" alt="" class="w-7 h-7"></span><span>Pricing</span>
+        </li>
+        <!-- <li data-target="order" class="text-center py-2 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">Order
+          Now</li> -->
+
+
+        <!-- <li data-target="review" class="text-center py-2 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
+          Reviews</li> -->
+      </ul>
+    </div>
+
+    <!-- Content Section -->
+    <section class="content-sec p-2 md:px-10  ">
+
+      <div id="intro" class="tab-content p-4  grid grid-cols-1 md:grid-cols-2 gap-2">
+
+        <!-- 1intro video  -->
+        <div class="intro-sec1 pt-2 md:pt-20  flex justify-content-center mb-5 ">
+          <iframe class="rounded-md shadow-md w-80 h-48 md:w-[560px] md:h-[315px]"
+            src="https://www.youtube.com/embed/A8R8e2YQr8w?si=ZLqUbZl7TQWTma3t" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+
+        <!-- Intro video 2 -->
+
+        <div class="intro-summ  text-end">
+          <h5 class="urdu-heading-1">
+            کیا آپ بھی جاننا چاہتے ہیں اپنی ایس ٹی ایس کارکردگی، اپنی صوبائی اور اپنے ضلع کے حساب سے اپنی پوزیشن ؟؟
+          </h5>
+          <ul class="urdu-text">
+            <li>کامیاب امیدواروں کی مجموعی تعداد</li>
+            <li>آپ کے ضلع میں کامیاب امیدواروں کی تعداد</li>
+            <li>تمام امیدواروں کا مجموعی صنفی تناسب</li>
+            <li>اضلاع کی بنیاد پر تفصیلی تجزیہ</li>
+            <li>صنف کی بنیاد پر تفصیلی تجزیہ</li>
+            <li>مجموعی طور پر آپ کا حاصل کردہ درجہ</li>
+            <li>آپ کے ضلع میں آپ کا درجہ</li>
+            <li>کامیاب امیدواروں کا ضلع وار صنفی تناسب</li>
+            <p class="urdu-heading-1 py-2">اور بہت کچھ۔</p>
+          </ul>
+          <p class="text-purple-400">100% Accurate Analysis based on STS Datasets</p>
+
+
+          <!-- <span  data-target="pricing" class="text-center rounded-sm px-4 bg-purple-700 text-white py-1 cursor-pointer">Next</span> -->
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <div id="pricing" class="tab-content hidden  ">
+
+
+        <div class=" grid grid-cols-1 md:grid-cols-3  justify-content-center  align-items-center">
+
+
+
+          <div class="price-1 p-2">
+
+            <div
+              class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+              <h5 class="mb-4 text-xl text-purple-700 font-bold">Intermediate Category (75% off)</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white pb-5">
+                <span class="text-3xl font-semibold text-black">RS.</span>
+                <span class="text-5xl font-extrabold tracking-tight text-black">50</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400 line-through"> Rs.250</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your Overall
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your District
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">District Score
+                    Rank Based on Gender </span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis based on
+                    Score</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis Based on
+                    Gender</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Delivery in 24 hrs (soft
+                    copy)</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
+                    Districts (Rs.150)</span>
+                </li>
+              </ul>
+             <p class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer"
+                >Order
+                Now</p>
+            </div>
+
+
+          </div>
+
+          <div class="price-1 p-2">
+
+            <div
+              class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+              <h5 class="mb-4 text-xl text-purple-700 font-bold">Graduation Category (75% off)</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white pb-5">
+                <span class="text-3xl font-semibold text-black">RS.</span>
+                <span class="text-5xl font-extrabold tracking-tight text-black">50</span>
+                <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400 line-through"> Rs.250</span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your Overall
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your District
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">District Score
+                    Rank Based on Gender </span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis based on
+                    Score</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis Based on
+                    Gender</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Delivery in 24 hrs (soft
+                    copy)</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
+                    Districts (Rs.150)</span>
+                </li>
+              </ul>
+              <!-- <a href=""> -->
+
+              <p class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer"
+                >Order
+                Now</p>
+
+              <!-- </a> -->
+            </div>
+
+
+          </div>
+                    <div class="price-1 p-2 opacity-100 cursor-not-allowed brightness-50">
+
+            <div
+              class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+              <h5 class="mb-4 text-xl font-bold text-gray-500 dark:text-gray-400">Matriculation Category</h5>
+              <div class="flex items-baseline text-gray-900 dark:text-white pb-5">
+                <span class="text-3xl font-semibold text-black">RS.</span>
+                <span class="text-5xl font-extrabold tracking-tight text-black">---</span>
+                <span class="ms-1 text-xl font-normal text-red-500 dark:text-red-400"> Coming Soon </span>
+              </div>
+              <ul role="list" class="space-y-5 my-7">
+                <li class="flex items-center">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your Overall
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">Your District
+                    Score Rank</span>
+                </li>
+                <li class="flex">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-500 ms-3">District Score
+                    Rank Based on Gender </span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis based on
+                    Score</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Your District Analysis Based on
+                    Gender</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Delivery in 24 hrs (soft
+                    copy)</span>
+                </li>
+                <li class="flex  decoration-gray-500">
+                  <svg class="shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                  </svg>
+                  <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
+                    Districts (Rs.150)</span>
+                </li>
+              </ul>
+              <button type="button"
+                class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-700 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">--</button>
+            </div>
+
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+      <!-- Form -->
+      <div id="test" class="tab-content hidden">
+
+
+
+        <div class="bg-white px-6 pb-6 rounded-lg shadow-lg w-full max-w-lg">
+          <h1 class="text-2xl font-bold mb-4 text-center">Search</h1>
+          <p class="text-red-500 ">Intermediate Category Only</p>
+
+          <!-- Search Form -->
+          <div class="mb-4">
+            <label class="block mb-2 font-semibold">Enter CNIC:</label>
+            <input type="text" id="cnicInput" placeholder="4410387104099"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <button id="searchBtn"
+            class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 w-full rounded-sm">
+            Search
+          </button>
+
+          <!-- Results -->
+          <div id="result" class="mt-6 text-gray-800"></div>
+        </div>
+
+        <script src="./app.js"></script>
+
+        <!-- Basic embed -->
+
+
+        <!-- Button to trigger popup -->
+
+
+
+
+
+
+      </div>
+
+    </section>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div id="popupOverlay"
+      class="hidden top-20 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white w-full max-w-lg rounded-lg shadow-lg p-6 text-center relative">
+        <!-- Close Button -->
+        <button id="closePopup"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold">&times;</button>
+
+        <div class="flex justify-center gap-4">
+          <img src="./assets/img/icons/mobile-banking.png" alt="pay" class="w-16 h-16">
+          <div>
+            <h2 class="text-2xl font-bold text-green-600 mb-2">Pay Now Online </h2>
+            <p class="text-gray-700 mb-4">Please Pay Report charges online </p>
+          </div>
+        </div>
+
+
+
+        <div class="text-left text-sm text-gray-600 space-y-2">
+
+
+          <div class=" flex flex-col gap-2 items-center  border border-gray-300 rounded p-3 text-center">
+            <img src="./assets/img/logos/Easypaisa-app-logo-vector.png" alt="easypaisa" class="w-32 h-8">
+            <div>
+              <p>Account Title: <b>Digital Neurons</b></p>
+              <p>Account No: <b class="text-2xl text-green-800">03122646268</b></p>
+            </div>
+          </div>
+
+          <div class="text-center pb-4">
+            <p class="urdu-text">ادائیگی کے بعد رسید واٹس ایپ پر بھیجیں</p>
+            <p>Send payment receipt on WhatsApp: <b>0312264626</b></p>
+          </div>
+
+        </div>
+
+        <!-- Nexy Button Bottom -->
+        <a href="./form.html"
+          class="text-center px-4 py-2 text-white bg-purple-500 hover:bg-purple-700 duration-500 rounded-sm">Next</a>
+
+      </div>
+    </div>
+
+    <script src="./popup.js"></script>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll(".sidebar li");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-target");
+
+        contents.forEach(c => c.classList.add("hidden"));
+        document.getElementById(target).classList.remove("hidden");
+      });
+    });
+  </script>
+
+
+
+
+  <!-- Popup Modal -->
+
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="">
+            <img src="./assets/img/logos/digitalNeuronsLogo.png" alt="dn logo" width="80" height="100"
+              style="padding-bottom: 20px;">
+          </a>
+          <p>Delivers AI, data analytics, and software solutions that turn complex challenges into smart, impactful
+            results.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://github.com/abidkk"><i class="bi bi-github"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61572319474608"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@digitalneurons5"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/abidkk/"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Data Analysis</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">AI Development</a></li>
+            <li><a href="#">Model Training</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Location</h4>
+
+          <p>Karachi, Pakitan</p>
+          <p>Mirpurkhas (sind), Pakitan</p>
+          <p class=""><strong>Phone:</strong> <span>+92 327 2686365</span></p>
+          <p><strong>Email:</strong> <span>digitalneurons.pk@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Digital Neurons</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

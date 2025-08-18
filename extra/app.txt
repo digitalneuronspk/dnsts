@@ -1,0 +1,37 @@
+https://script.google.com/macros/s/AKfycbxfhbAOFlH_0Pik9Rc_3GqVoxaH9rjTvK64QYPSmIDHkxdZc50uHhyvMk8usOfabMUI/exec
+
+
+Version 1 on Aug 15, 2025, 11:06 PM
+Deployment ID
+AKfycbxfhbAOFlH_0Pik9Rc_3GqVoxaH9rjTvK64QYPSmIDHkxdZc50uHhyvMk8usOfabMUI
+
+webapp url
+
+https://script.google.com/macros/s/AKfycbxfhbAOFlH_0Pik9Rc_3GqVoxaH9rjTvK64QYPSmIDHkxdZc50uHhyvMk8usOfabMUI/exec
+
+
+library
+https://script.google.com/macros/library/d/1pZicIcvu5LJg94yMnY_69vWY8IxzL3EC3zrYw2HaiUMavoC25o9FadCx/2
+
+
+
+
+
+
+
+
+
+
+
+userdata
+
+AKfycbxiAbh2EN0CG5TKGt7Hq_Qu7mAH8_LrdaYR3suFOgT8oQlDDc4BHbkPlcJfhEDkOnNU
+
+https://script.google.com/macros/s/AKfycbxiAbh2EN0CG5TKGt7Hq_Qu7mAH8_LrdaYR3suFOgT8oQlDDc4BHbkPlcJfhEDkOnNU/exec
+
+
+
+
+
+
+https://script.google.com/macros/s/AKfycbxiAbh2EN0CG5TKGt7Hq_Qu7mAH8_LrdaYR3suFOgT8oQlDDc4BHbkPlcJfhEDkOnNU/exec
