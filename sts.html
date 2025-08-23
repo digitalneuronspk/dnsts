@@ -62,9 +62,80 @@
   ======================================================== -->
 </head>
 
-<body class="service-details-page">
+<body class="service-details-page ">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top ">
+
+
+    <section
+      class="bg-white hidden md:flex flex-col justify-start items-center min-w-80 absolute top-0 left-80 bg-transparent p-0">
+
+      <div class="flex gap-2">
+        <div>
+          <img src="./assets/img/icons/offer.png" alt="offer" class="w-20 h-20">
+        </div>
+
+        <!-- Timer (Left Side) -->
+        <div class="timer text-center text-black p-2 rounded-sm" data-hours="114">
+          <div class="flex space-x-2 mt-2 text-lg">
+            <div class="p-2 bg-gray-800 text-white rounded-sm"><span class="days">00</span>d</div>
+            <div class="p-2 bg-gray-800 text-white rounded-sm"><span class="hours">00</span>h</div>
+            <div class="p-2 bg-gray-800 text-white rounded-sm"><span class="minutes">00</span>m</div>
+            <div class="p-2 bg-gray-800 text-white rounded-sm"><span class="seconds">00</span>s</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-sm text-center">
+          پہلے 200 امیدواروں کے لئے اسپیشل آفر مکمل ذاتی رپورٹ صرف <span class="font-bold">30</span> روپے میں
+        </p>
+      </div>
+    </section>
+
+    <script>
+      function initTimer(timerEl) {
+        const hoursToAdd = parseInt(timerEl.getAttribute("data-hours")) || 5;
+        const targetDate = new Date();
+        targetDate.setHours(targetDate.getHours() + hoursToAdd);
+
+        function updateTimer() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          if (distance <= 0) {
+            timerEl.innerHTML = "<h2 class='text-lg font-bold'>Offer Expired</h2>";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          timerEl.querySelector(".days").textContent = days.toString().padStart(2, '0');
+          timerEl.querySelector(".hours").textContent = hours.toString().padStart(2, '0');
+          timerEl.querySelector(".minutes").textContent = minutes.toString().padStart(2, '0');
+          timerEl.querySelector(".seconds").textContent = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+      }
+
+      // Initialize all timers on the page
+      document.querySelectorAll(".timer").forEach(initTimer);
+    </script>
+
+
+
+
+
+
+
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class=" me-auto">
@@ -113,7 +184,43 @@
 
 
 
+
+
+
+
   <main class="main-section flex gap-2 flex-col md:flex-row justify-start">
+
+
+
+    <div id="offer-banner"
+      class="fixed top-48 left-1/2 -translate-x-1/2 bg-white text-black px-6 py-3 rounded-lg shadow-lg text-center z-50 py-5">
+      <section class="bg-white  md:flex flex-col justify-start items-center min-w-80 t p-0">
+
+        <div class="flex flex-col items-center gap-2">
+          <div>
+            <img src="./assets/img/icons/offer.png" alt="offer" class="w-28 h-28">
+          </div>
+
+          <div>
+            <p class="text-md text-center">
+              پہلے 200 امیدواروں کے لئے اسپیشل آفر, مکمل ذاتی رپورٹ صرف <span class="font-bold">30</span> روپے میں
+            </p>
+          </div>
+      </section>
+    </div>
+
+
+    <script>
+      // Hide the banner after 3 seconds
+      setTimeout(() => {
+        const banner = document.getElementById("offer-banner");
+        if (banner) {
+          banner.style.display = "none";
+        }
+      }, 8000);
+    </script>
+
+
     <!-- Sidebar -->
     <div class="sidebar min-w-80 bg-purple-50 p-2 md:h-[600px] py-4">
       <ul class="m-0 p-0 flex flex-col gap-1">
@@ -133,6 +240,25 @@
         </li>
         <!-- <li data-target="order" class="text-center py-2 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">Order
           Now</li> -->
+        <a href="./assets/sample_report-p.pdf"
+          download="dn-sts-sample-report">
+
+
+          <li
+          data-target="pricing"
+            class="flex justify-start items-center gap-2 shadow-sm py-2 bg-purple-50 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
+            <span><img src="./assets/img/logos/pdf_18459428.png" alt="" class="w-7 h-7 text-gray-700">
+
+            </span><span class="text-sm">Download Personal
+              Report (Smaple)</span>
+
+
+
+
+
+
+          </li>
+        </a>
 
 
         <!-- <li data-target="review" class="text-center py-2 hover:bg-purple-200 duration-500 mb-1 p-2 cursor-pointer">
@@ -142,6 +268,7 @@
 
     <!-- Content Section -->
     <section class="content-sec p-2 md:px-10  ">
+
 
       <div id="intro" class="tab-content p-4  grid grid-cols-1 md:grid-cols-2 gap-2">
 
@@ -204,7 +331,7 @@
               <h5 class="mb-4 text-xl text-purple-700 font-bold">Intermediate Category (75% off)</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white pb-5">
                 <span class="text-3xl font-semibold text-black">RS.</span>
-                <span class="text-5xl font-extrabold tracking-tight text-black">50</span>
+                <span class="text-5xl font-extrabold tracking-tight text-black">30</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400 line-through"> Rs.250</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -269,11 +396,12 @@
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                   </svg>
                   <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
-                    Districts (Rs.150)</span>
+                    Districts (Rs.350)</span>
                 </li>
               </ul>
-             <p class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer"
-                >Order
+              <p
+                class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer">
+                Order
                 Now</p>
             </div>
 
@@ -287,7 +415,7 @@
               <h5 class="mb-4 text-xl text-purple-700 font-bold">Graduation Category (75% off)</h5>
               <div class="flex items-baseline text-gray-900 dark:text-white pb-5">
                 <span class="text-3xl font-semibold text-black">RS.</span>
-                <span class="text-5xl font-extrabold tracking-tight text-black">50</span>
+                <span class="text-5xl font-extrabold tracking-tight text-black">30</span>
                 <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400 line-through"> Rs.250</span>
               </div>
               <ul role="list" class="space-y-5 my-7">
@@ -352,13 +480,14 @@
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                   </svg>
                   <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
-                    Districts (Rs.150)</span>
+                    Districts (Rs.350)</span>
                 </li>
               </ul>
               <!-- <a href=""> -->
 
-              <p class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer"
-                >Order
+              <p
+                class="openPopup text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center cursor-pointer">
+                Order
                 Now</p>
 
               <!-- </a> -->
@@ -366,7 +495,7 @@
 
 
           </div>
-                    <div class="price-1 p-2 opacity-100 cursor-not-allowed brightness-50">
+          <div class="price-1 p-2 opacity-100 cursor-not-allowed brightness-50">
 
             <div
               class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -438,7 +567,7 @@
                       d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                   </svg>
                   <span class="text-base font-normal leading-tight text-gray-500 ms-3">Complete Report Including all
-                    Districts (Rs.150)</span>
+                    Districts (Rs.350)</span>
                 </li>
               </ul>
               <button type="button"
@@ -462,8 +591,8 @@
 
 
 
-        <div class="bg-white px-6 pb-6 rounded-lg shadow-lg w-full max-w-lg">
-          <h1 class="text-2xl font-bold mb-4 text-center">Search</h1>
+        <div class="bg-white px-6 pb-6 rounded-sm w-full max-w-lg py-2 shadow-md ">
+          <h1 class="text-lg font-bold mb-2 text-center">Search</h1>
           <p class="text-red-500 ">Intermediate Category Only</p>
 
           <!-- Search Form -->
@@ -521,9 +650,9 @@
 
 
           <div class=" flex flex-col gap-2 items-center  border border-gray-300 rounded p-3 text-center">
-            <img src="./assets/img/logos/Easypaisa-app-logo-vector.png" alt="easypaisa" class="w-32 h-8">
+            <img src="./assets/img/logos/jazzcash.png" alt="easypaisa" class="w-48 h-10">
             <div>
-              <p>Account Title: <b>Digital Neurons</b></p>
+              <p>Account Title: <b>Ali Abid</b></p>
               <p>Account No: <b class="text-2xl text-green-800">03122646268</b></p>
             </div>
           </div>
